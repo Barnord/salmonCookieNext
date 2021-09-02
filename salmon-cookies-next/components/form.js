@@ -1,14 +1,20 @@
 import React, {useState} from 'react';
 
-function Form() {
+function Form(props) {
+
+  const [formInput, setFormInput] = useState({});
+
   const handleChange = (e) => {
-    e.preventDefault();
-    setWords(e.target.value);
+    setFormInput({...formInput,[e.target.name]: e.target.value});
   }
-  const [words, setWords] = useState('StarterState');
-  const [allThings, setAllThings] = useState({});
+
+  const handleSubmit= (e) => {
+    e.preventDefault();
+    props.handleSubmit(formInput);
+  }
+
   return(
-    <form>
+    <form onSubmit={handleSubmit}>
       <h3>Create Cookie Stand</h3>
       <label>Location
         <input name="location" onChange={handleChange} />

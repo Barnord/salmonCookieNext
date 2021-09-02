@@ -3,5 +3,3 @@ function Head() {
 }
 
 export default Head;
-
-// this is good
