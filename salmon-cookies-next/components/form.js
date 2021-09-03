@@ -21,13 +21,13 @@ function Form(props) {
       </label>
       <br />
       <label>Minimum Customers per Hour
-        <input name="MinCust" onChange={handleChange} />
+        <input name="minCust" onChange={handleChange} />
       </label>
       <label>Maximum Customers per Hour
-        <input name="MaxCust" onChange={handleChange} />
+        <input name="maxCust" onChange={handleChange} />
       </label>
       <label>Average Cookies per Sale
-        <input name="AvgSale" onChange={handleChange} />
+        <input name="avgSale" onChange={handleChange} />
       </label>
       <button type="submit">Create</button>
     </form>
